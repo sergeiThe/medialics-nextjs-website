@@ -1,8 +1,17 @@
 import React from 'react'
+import Header from './Header'
+import SocialIcons from './SocialIcons'
 
-function Layout() {
+function Layout({children}) {
   return (
-    <div>Layout</div>
+    <React.Fragment>
+      <Header/>
+      <main>
+      {children}
+      </main>
+      <SocialIcons/>
+
+    </React.Fragment>
   )
 }
 

@@ -42,3 +42,5 @@ const data = {
         linkedin: "https://www.linkedin.com/in/sergei-johansen-b731b0189/"
     }
 }
+
+export default data;

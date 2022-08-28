@@ -1,8 +1,13 @@
 import React from 'react'
+import data from '../data/data'
 
 function Projects() {
   return (
-    <div>Projects</div>
+    <section>
+      <div>
+        <p>{data.projects.text}</p>
+      </div>
+    </section>
   )
 }
 
