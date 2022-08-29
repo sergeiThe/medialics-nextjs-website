@@ -1,0 +1,104 @@
+.header {
+    display: grid;
+    grid-template-columns: [logo] 100px [nav] 45rem;
+    grid-template-rows: auto;
+    grid-template-areas: "logo nav";
+    align-items: center;
+    justify-content: space-between;
+
+    animation: fadeIn 1.5s ease-out 0.5s backwards;
+
+    @include respond(tablet-portrait) {
+        grid-template-columns: [logo] 100px [nav] 40rem;
+    }
+    @include respond(mobile) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px;
+        align-items: center;
+    }
+
+    @include respond(desktop) {
+        grid-template-columns: [logo] 100px [nav] 50rem;
+    }
+
+    @include respond(desktop) {
+        grid-template-columns: [logo] 100px [nav] 50rem;
+    }
+
+    &__logo {
+        grid-area: logo;
+        color: $bg-color-secondary;
+        font-size: 2rem;
+
+        @include respond(mobile) {
+            grid-area: mobileLogo;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+            text-align: center;
+        }
+    }
+
+    &__nav {
+        grid-area: nav;
+        position: relative;
+
+        @include respond(mobile) {
+            grid-area: mobileNav;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+    }
+
+    &__nav::after {
+        @include respond(mobile) {
+            content: "";
+            width: calc(100% + 10vw);
+            height: 100%;
+            position: absolute;
+            left: -5vw;
+            top: 0;
+            background-color: $bg-color-secondary;
+            z-index: -5;
+        }
+    }
+
+    &__ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: end;
+        align-items: center;
+
+        @include respond(mobile) {
+            grid-area: mobileNav;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+            justify-items: center;
+        }
+    }
+
+    &__li {
+    }
+
+    &__nav-link {
+    }
+}
+
+// Animations
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

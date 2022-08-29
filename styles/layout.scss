@@ -1,0 +1,46 @@
+body {
+    background-color: $bg-color-primary;
+
+    padding: 30px 5vw;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+
+    @include respond(mobile) {
+        padding: 20px 5vw;
+    }
+
+    @include respond(desktop) {
+        padding: 50px 10vw;
+    }
+
+    @include respond(big-desktop) {
+        padding: 70px 15vw;
+    }
+}
+
+main {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: $bg-color-secondary;
+        left: -5vw;
+        top: 18vh;
+
+        height: 15rem;
+        width: calc(100% + 10vw);
+
+        z-index: -10;
+
+        @include respond(desktop) {
+            left: -10vw;
+            width: calc(100% + 20vw);
+        }
+        @include respond(big-desktop) {
+            left: -15vw;
+            width: calc(100% + 30vw);
+        }
+    }
+}

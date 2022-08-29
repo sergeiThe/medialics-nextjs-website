@@ -1,0 +1,92 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 11.5rem;
+
+    @include respond(tablet-portrait) {
+        height: 13rem;
+    }
+
+    @include respond(desktop) {
+        height: 11rem;
+    }
+
+    @include respond(desktop) {
+        height: 10.5rem;
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    &__icon {
+        color: $bg-color-secondary;
+        font-size: 2rem;
+
+        cursor: pointer;
+
+        &:hover {
+            color: $text-color-primary;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 1px;
+        height: 50px;
+        background-color: $bg-color-secondary;
+
+        position: absolute;
+        bottom: 0;
+        left: 9px;
+
+        @include respond(tablet-portrait) {
+            left: 7px;
+        }
+
+        @include respond(desktop) {
+            left: 10px;
+        }
+        @include respond(big-desktop) {
+            left: 11px;
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 10px;
+
+        background-color: $bg-color-secondary;
+        position: absolute;
+        bottom: 50px;
+        left: 6px;
+
+        @include respond(tablet-portrait) {
+            left: 4px;
+        }
+
+        @include respond(desktop) {
+            left: 7px;
+        }
+        @include respond(big-desktop) {
+            left: 8px;
+        }
+    }
+
+    animation: slideUp 0.5s ease-out 1s backwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

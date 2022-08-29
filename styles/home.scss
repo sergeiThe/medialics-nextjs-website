@@ -1,0 +1,155 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+
+    height: 80vh;
+    padding: 0 5vw;
+
+    @include respond(mobile) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+    }
+
+    &__title-container {
+        @include respond(mobile) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        color: $text-color-primary;
+    }
+
+    &__content-container {
+        text-align: center;
+        height: 100%;
+        padding: 18vh 50px;
+        background-color: $bg-color-primary;
+        // border: 1px solid $bg-color-secondary;
+
+        @include respond(tablet-portrait) {
+            padding: 18vh 20px;
+        }
+
+        @include respond(mobile) {
+            padding: 0;
+        }
+    }
+
+    &__text {
+        color: $text-color-primary;
+    }
+
+    &__button {
+        color: $bg-color-secondary;
+        border: 1px solid $bg-color-secondary;
+        background-color: $bg-color-primary;
+        padding: 1.5rem 3rem;
+        margin-top: 3rem;
+
+        position: relative;
+        z-index: 10;
+
+        transition: all 0.2s;
+
+        &:hover {
+            box-shadow: 0px 2px 5px $bg-color-secondary;
+        }
+
+        &:hover::after {
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+        &:hover::before {
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background-color: $bg-color-secondary;
+            left: -3px;
+            bottom: -3px;
+            transition: all 0.3s;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            background-color: $bg-color-secondary;
+            left: -3px;
+            bottom: -3px;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.tech-stack {
+    display: grid;
+    width: 25rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include respond(desktop) {
+        width: 30rem;
+    }
+
+    @include respond(tablet-portrait) {
+        width: 30rem;
+    }
+
+    & > * {
+        color: $bg-color-secondary;
+        font-size: 3rem;
+
+        @include respond(desktop) {
+            font-size: 5rem;
+        }
+
+        @include respond(tablet-portrait) {
+            font-size: 5rem;
+        }
+    }
+}
+
+.rotate {
+    animation: fullRotation 10s linear infinite forwards;
+}
+
+@keyframes fullRotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(72deg);
+    }
+
+    40% {
+        transform: rotate(144deg);
+    }
+
+    60% {
+        transform: rotate(216deg);
+    }
+
+    80% {
+        transform: rotate(288deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
