@@ -21,7 +21,14 @@ body {
 
 main {
     position: relative;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 70px);
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    overflow-y: scroll;
+    overflow-x: visible;
 
     &::before {
         content: "";
@@ -38,11 +45,11 @@ main {
 
         @include respond(desktop) {
             left: -10vw;
-            width: calc(100% + 20vw);
+            // width: calc(100% + 20vw);
         }
         @include respond(big-desktop) {
             left: -15vw;
-            width: calc(100% + 30vw);
+            // width: calc(100% + 30vw);
         }
     }
 }

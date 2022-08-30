@@ -9,10 +9,32 @@ const data = {
         text: "Todos os seres humanos nascem livres e iguais em dignidade e direitos. São dotados de razão e consciência e devem agir em relação uns aos outros com espírito de fraternidade.",
 
         projectList: [{
+            id: 'p1',
             title: "Nano Detailing",
             techStack: "Wordpress & Elementor",
             siteURL: "https://nanodetailing.no/"
         }, {
+            id: 'p2',
+            title: "Oriental Thaimassasje",
+            techStack: "ReactJS & NextJS",
+            siteURL: "https://www.orientalthaimassasje.no/"
+        }, {
+            id: 'p3',
+            title: "Nano Detailing",
+            techStack: "Wordpress & Elementor",
+            siteURL: "https://nanodetailing.no/"
+        }, {
+            id: 'p4',
+            title: "Oriental Thaimassasje",
+            techStack: "ReactJS & NextJS",
+            siteURL: "https://www.orientalthaimassasje.no/"
+        }, {
+            id: 'p5',
+            title: "Nano Detailing",
+            techStack: "Wordpress & Elementor",
+            siteURL: "https://nanodetailing.no/"
+        }, {
+            id: 'p6',
             title: "Oriental Thaimassasje",
             techStack: "ReactJS & NextJS",
             siteURL: "https://www.orientalthaimassasje.no/"

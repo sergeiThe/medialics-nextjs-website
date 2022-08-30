@@ -1,0 +1,43 @@
+.projects {
+    height: 100%;
+    padding: 5rem 10vw;
+
+    @include respond(mobile) {
+        padding: 2rem 2rem;
+    }
+
+    &__text {
+        padding: 5rem 0;
+        color: $bg-color-secondary;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 50px;
+
+        @include respond(mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.block {
+    height: 5rem;
+    @include respond(mobile) {
+        height: 10rem;
+    }
+}
+
+.project {
+    background-color: $bg-color-secondary;
+    height: 20rem;
+    width: 100%;
+    padding: 3rem;
+
+    text-align: left;
+    color: $text-color-primary;
+
+    display: grid;
+}
