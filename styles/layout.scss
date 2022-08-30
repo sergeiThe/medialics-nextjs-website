@@ -30,6 +30,12 @@ main {
     overflow-y: scroll;
     overflow-x: visible;
 
+    @include respond(mobile) {
+        overflow-y: auto;
+        overflow-x: auto;
+        height: calc(100vh - 120px);
+    }
+
     &::before {
         content: "";
         position: absolute;

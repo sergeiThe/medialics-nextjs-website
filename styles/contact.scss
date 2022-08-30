@@ -1,0 +1,45 @@
+.contact {
+    padding: 0 5vw;
+    width: 600px;
+    // border: $bg-color-secondary 1px solid;
+
+    &__title {
+        color: $text-color-primary;
+    }
+
+    &__text {
+        color: $text-color-primary;
+        padding: 5rem 0;
+    }
+
+    &__info-box {
+        color: $bg-color-secondary;
+        display: grid;
+        padding: 3rem 0;
+    }
+}
+
+.form {
+    display: grid;
+    width: 400px;
+
+    @include respond(mobile) {
+        width: 100%;
+    }
+
+    label {
+        color: $bg-color-secondary;
+    }
+
+    input {
+        background-color: transparent;
+        border: $bg-color-secondary 1px solid;
+        height: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+}
