@@ -42,56 +42,6 @@
     &__text {
         color: $text-color-primary;
     }
-
-    &__button {
-        color: $bg-color-secondary;
-        border: 1px solid $bg-color-secondary;
-        background-color: $bg-color-primary;
-        padding: 1.5rem 3rem;
-        margin-top: 3rem;
-
-        position: relative;
-        z-index: 10;
-
-        transition: all 0.2s;
-
-        &:hover {
-            box-shadow: 0px 2px 5px $bg-color-secondary;
-        }
-
-        &:hover::after {
-            left: 0;
-            bottom: 0;
-            opacity: 0;
-        }
-        &:hover::before {
-            left: 0;
-            bottom: 0;
-            opacity: 0;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 1px;
-            background-color: $bg-color-secondary;
-            left: -3px;
-            bottom: -3px;
-            transition: all 0.3s;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            height: 1px;
-            width: 100%;
-            background-color: $bg-color-secondary;
-            left: -3px;
-            bottom: -3px;
-            transition: all 0.3s;
-        }
-    }
 }
 
 .tech-stack {
@@ -99,8 +49,9 @@
     width: 25rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
     right: 0;
+    justify-items: end;
 
     @include respond(desktop) {
         width: 30rem;
@@ -112,7 +63,7 @@
 
     & > * {
         color: $bg-color-secondary;
-        font-size: 3rem;
+        font-size: 4rem;
 
         @include respond(desktop) {
             font-size: 5rem;

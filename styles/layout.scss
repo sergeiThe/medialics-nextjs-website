@@ -21,6 +21,7 @@ body {
 
 main {
     position: relative;
+    height: calc(100vh - 120px);
 
     &::before {
         content: "";
@@ -30,7 +31,8 @@ main {
         top: 18vh;
 
         height: 15rem;
-        width: calc(100% + 10vw);
+        // width: calc(100% + 10vw);
+        width: 5vw;
 
         z-index: -10;
 

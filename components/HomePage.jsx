@@ -12,7 +12,9 @@ export default function HomePage() {
                 </div>
                 <div className="home__content-container">
                     <p className="home__text">{data.home.about}</p>
-                    <button className="home__button">Kontakt</button>
+                    <button className="home__button page-button">
+                        Kontakt
+                    </button>
                 </div>
             </section>
             <div className="tech-stack">

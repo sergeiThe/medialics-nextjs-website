@@ -21,9 +21,11 @@ const data = {
 
     services: {
         list: [{
+            id: 'sl1',
             title: "Nettsted",
             text: "Todos os seres humanos nascem livres e iguais em dignidade e direitos. São dotados de razão e consciência e devem agir em relação uns aos outros com espírito de fraternidade. Todos os "
         }, {
+            id: 'sl2',
             title: "Google Ads",
             text: "Todos os seres humanos nascem livres e iguais em dignidade e direitos. São dotados de razão e consciência e devem agir em relação uns aos outros com espírito de fraternidade. Todos os "
         }]
