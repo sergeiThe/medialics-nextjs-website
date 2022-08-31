@@ -1,18 +1,20 @@
-import React from 'react'
-import Header from './Header'
-import SocialIcons from './SocialIcons'
+import React from "react";
+import Header from "./Header";
+import SocialIcons from "./SocialIcons";
+import { usePageContext } from "../store/PageTypeContext";
 
-function Layout({children}) {
-  return (
-    <React.Fragment>
-      <Header/>
-      <main>
-      {children}
-      </main>
-      <SocialIcons/>
+function Layout({ children }) {
+    const pageCtx = usePageContext();
 
-    </React.Fragment>
-  )
+    return (
+        <React.Fragment>
+            <Header />
+            <main className={pageCtx.allowScroll ? "scroll-allowed" : null}>
+                {children}
+            </main>
+            <SocialIcons />
+        </React.Fragment>
+    );
 }
 
-export default Layout
+export default Layout;

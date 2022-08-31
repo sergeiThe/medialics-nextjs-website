@@ -12,3 +12,20 @@ $p-size: 1.5rem;
 
 $font-primary: monospace;
 $font-secondary: Arial;
+
+$height-body: 100vh;
+$height-header: 80px;
+$height-main: calc($height-body - $height-header);
+
+$width-body: 100%;
+$width-main: 100%;
+
+$padding-body: 0 5vw;
+$padding-main: 0 10vw;
+$padding-p: 3rem 0;
+
+$bottom-items: calc($height-header/2);
+
+// Mobile
+$mobile-height-header: 150px;
+$mobile-bottom-items: calc($mobile-height-header/3 * 2);

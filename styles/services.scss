@@ -3,43 +3,33 @@
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
-
-    height: 80vh;
-    padding: 0 5vw;
+    height: 70%;
 
     @include respond(mobile) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 0;
         align-items: center;
-        height: 60vh;
-
-        padding-top: 5rem;
     }
 
     &__bottom-text {
         width: 50rem;
         position: absolute;
-        bottom: 3rem;
+        bottom: $bottom-items;
         right: 0;
         text-align: right;
 
         color: $bg-color-secondary;
 
         @include respond(mobile) {
-            width: 20rem;
-            bottom: 2rem;
+            bottom: $mobile-bottom-items;
+            width: 30rem;
         }
     }
 }
 
 .service {
     text-align: center;
-    padding: 0rem 5rem 2rem 5rem;
-
-    @include respond(mobile) {
-        padding: 0 5rem;
-    }
 
     &__text {
         color: $text-color-primary;

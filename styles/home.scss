@@ -4,9 +4,6 @@
     gap: 50px;
     align-items: center;
 
-    height: 80vh;
-    padding: 0 5vw;
-
     @include respond(mobile) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -46,32 +43,20 @@
 
 .tech-stack {
     display: grid;
-    width: 25rem;
+    width: 30rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: absolute;
-    bottom: 0rem;
+    bottom: $bottom-items;
     right: 0;
     justify-items: end;
 
-    @include respond(desktop) {
-        width: 30rem;
-    }
-
-    @include respond(tablet-portrait) {
-        width: 30rem;
+    @include respond(mobile) {
+        bottom: $mobile-bottom-items;
     }
 
     & > * {
         color: $bg-color-secondary;
-        font-size: 4rem;
-
-        @include respond(desktop) {
-            font-size: 5rem;
-        }
-
-        @include respond(tablet-portrait) {
-            font-size: 5rem;
-        }
+        font-size: 5rem;
     }
 }
 

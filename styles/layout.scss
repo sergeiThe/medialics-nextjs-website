@@ -1,40 +1,16 @@
 body {
     background-color: $bg-color-primary;
 
-    padding: 30px 5vw;
+    padding: $padding-body;
     height: 100vh;
     position: relative;
     overflow-y: hidden;
-
-    @include respond(mobile) {
-        padding: 20px 5vw;
-    }
-
-    @include respond(desktop) {
-        padding: 50px 10vw;
-    }
-
-    @include respond(big-desktop) {
-        padding: 70px 15vw;
-    }
 }
 
 main {
     position: relative;
-    height: calc(100vh - 70px);
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    overflow-y: scroll;
-    overflow-x: visible;
-
-    @include respond(mobile) {
-        overflow-y: auto;
-        overflow-x: auto;
-        height: calc(100vh - 120px);
-    }
+    height: $height-main;
+    padding: $padding-main;
 
     &::before {
         content: "";
@@ -57,5 +33,16 @@ main {
             left: -15vw;
             // width: calc(100% + 30vw);
         }
+    }
+}
+
+.scroll-allowed {
+    overflow-y: scroll;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
     }
 }

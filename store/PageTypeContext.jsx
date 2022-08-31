@@ -1,44 +1,48 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState } from "react";
 
 export const pages = {
     homePage: "home",
     projectsPage: "projects",
     servicesPage: "services",
-    contactPage: "contact"
-}
+    contactPage: "contact",
+};
 
 const PageTypeContext = React.createContext({
     currentPage: "home",
-    setCurrentPage: (newPage) => {}
-})
+    setCurrentPage: (newPage) => {},
+    allowScroll: false,
+});
 
 export const usePageContext = () => {
-    return useContext(PageTypeContext)
-}
+    return useContext(PageTypeContext);
+};
 
-const PageTypeContextProvider = ({children}) => {
-
-    const [page, setPage] = useState()
-
+const PageTypeContextProvider = ({ children }) => {
+    const [page, setPage] = useState();
+    const [scrollAllowed, setScrollAllowed] = useState();
 
     const setCurrentPage = (newPage) => {
-        if (page == "home") {
-            setPage(newPage)
+        if (newPage == pages.projectsPage) {
+            setScrollAllowed(true);
+            setPage(newPage);
             return;
         }
 
+        setScrollAllowed(false);
         setPage(newPage);
-
-    }
+    };
 
     return (
-        <PageTypeContext.Provider value={{
-            currentPage: page,
-            setCurrentPage
-        }}>
+        <PageTypeContext.Provider
+            value={{
+                currentPage: page,
+                setCurrentPage,
+                allowScroll: scrollAllowed,
+            }}
+        >
             {children}
         </PageTypeContext.Provider>
-    )
-}
+    );
+};
 
 export default PageTypeContextProvider;

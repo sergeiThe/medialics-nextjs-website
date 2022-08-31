@@ -1,14 +1,12 @@
 .projects {
     height: 100%;
-    padding: 5rem 10vw;
-
-    @include respond(mobile) {
-        padding: 2rem 2rem;
-    }
 
     &__text {
-        padding: 5rem 0;
         color: $bg-color-secondary;
+
+        @include respond(mobile) {
+            padding-top: 3rem;
+        }
     }
 
     &__list {
@@ -19,6 +17,7 @@
 
         @include respond(mobile) {
             grid-template-columns: 1fr;
+            gap: 20px;
         }
     }
 }
@@ -26,7 +25,7 @@
 .block {
     height: 5rem;
     @include respond(mobile) {
-        height: 10rem;
+        height: 20rem;
     }
 }
 

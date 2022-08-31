@@ -1,7 +1,7 @@
 .header {
     display: grid;
     grid-template-columns: [logo] 100px [nav] 45rem;
-    grid-template-rows: auto;
+    height: $height-header;
     grid-template-areas: "logo nav";
     align-items: center;
     justify-content: space-between;
@@ -13,8 +13,8 @@
     }
     @include respond(mobile) {
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 50px;
-        align-items: center;
+        align-items: flex-end;
+        height: $mobile-height-header;
     }
 
     @include respond(desktop) {
@@ -38,12 +38,14 @@
             grid-column-end: 2;
 
             text-align: center;
+            font-size: 4rem;
         }
     }
 
     &__nav {
         grid-area: nav;
         position: relative;
+        border-bottom: $bg-color-primary 2px solid;
 
         @include respond(mobile) {
             grid-area: mobileNav;
