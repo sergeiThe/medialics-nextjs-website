@@ -1,5 +1,6 @@
 .projects {
     height: 100%;
+    animation: fadeIn 1.5s ease-out 0s backwards;
 
     &__text {
         color: $bg-color-secondary;
@@ -30,7 +31,10 @@
 }
 
 .project {
-    background-color: $bg-color-secondary;
+    // background-color: $bg-color-secondary;
+    // background: url("/ab.jpg");
+    background-size: cover;
+    background-position: center center;
     height: 20rem;
     width: 100%;
     padding: 3rem;

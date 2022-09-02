@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import data from "../data/data";
 import Form from "./Form";
+import { BiMailSend, BiPhone, BiCurrentLocation } from "react-icons/bi";
 
 function Contact() {
     return (
@@ -9,9 +10,18 @@ function Contact() {
 
             <Form />
             <div className="contact__info-box">
-                <span>{data.contact.email}</span>
-                <span>{data.contact.phone}</span>
-                <span>{data.contact.address}</span>
+                <span>
+                    <BiMailSend />
+                    {data.contact.email}
+                </span>
+                <span>
+                    <BiPhone />
+                    {data.contact.phone}
+                </span>
+                <span>
+                    <BiCurrentLocation />
+                    {data.contact.address}
+                </span>
             </div>
         </section>
     );

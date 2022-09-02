@@ -3,15 +3,12 @@
     height: 100%;
     display: grid;
     align-content: center;
+    animation: fadeIn 1.5s ease-out 0s backwards;
     // border: $bg-color-secondary 1px solid;
 
     @include respond(mobile) {
         align-content: flex-start;
         width: 100%;
-    }
-
-    &__title {
-        color: $text-color-primary;
     }
 
     &__text {
@@ -20,18 +17,33 @@
             padding-top: 3rem;
             text-align: center;
         }
+
+        animation: fadeIn 1.5s ease-out 0s backwards;
     }
 
     &__info-box {
         color: $bg-color-secondary;
         display: grid;
         padding: 3rem 0;
+        animation: fadeIn 1.5s ease-out 2s backwards;
+
+        & > * {
+            position: relative;
+            left: 2rem;
+        }
+
+        & > * > *:nth-child(1) {
+            position: absolute;
+            left: -2rem;
+            top: 2px;
+        }
     }
 }
 
 .form {
     display: grid;
     width: 100%;
+    animation: fadeIn 1.5s ease-out 1s backwards;
 
     @include respond(mobile) {
         width: 100%;
@@ -47,6 +59,13 @@
         height: 3rem;
         margin-bottom: 2rem;
         margin-top: 1rem;
+        padding: 0 1rem;
+        color: white;
+        border-radius: 0;
+
+        &:focus {
+            outline: 1px solid white;
+        }
     }
 
     button {

@@ -1,5 +1,7 @@
 $bg-color-primary: #26584e;
 $bg-color-secondary: #38b199;
+$bg-color-secondary-05: #38b19986;
+$bg-color-secondary-02: #38b1993a;
 
 $text-color-primary: white;
 $text-color-secondary: $bg-color-secondary;
@@ -29,3 +31,8 @@ $bottom-items: calc($height-header/2);
 // Mobile
 $mobile-height-header: 150px;
 $mobile-bottom-items: calc($mobile-height-header/3 * 2);
+$mobile-padding-main: 0 5vw;
+
+// Desktop
+$desktop-height-header: $height-header + 50px;
+$desktop-height-main: calc($height-body - $desktop-height-header);

@@ -2,8 +2,15 @@ import React from "react";
 import data from "../data/data";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact, FaSass, FaWordpressSimple } from "react-icons/fa";
+import { usePageContext, pages } from "../store/PageTypeContext";
 
 export default function HomePage() {
+    const pageCtx = usePageContext();
+
+    const goToContactPage = () => {
+        pageCtx.setCurrentPage(pages.contactPage);
+    };
+
     return (
         <React.Fragment>
             <section className="home">
@@ -12,7 +19,10 @@ export default function HomePage() {
                 </div>
                 <div className="home__content-container">
                     <p className="home__text">{data.home.about}</p>
-                    <button className="home__button page-button">
+                    <button
+                        className="home__button page-button"
+                        onClick={goToContactPage}
+                    >
                         Kontakt
                     </button>
                 </div>

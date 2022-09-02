@@ -1,10 +1,14 @@
 .footer {
     position: absolute;
     bottom: 0;
+    left: 5vw;
     height: 11.5rem;
 
     @include respond(tablet-portrait) {
         height: 13rem;
+    }
+    @include respond(mobile) {
+        display: none;
     }
 
     @include respond(desktop) {
@@ -43,6 +47,10 @@
         bottom: 0;
         left: 9px;
 
+        @include respond(mobile) {
+            height: 200px;
+        }
+
         @include respond(tablet-portrait) {
             left: 7px;
         }
@@ -65,6 +73,10 @@
         position: absolute;
         bottom: 50px;
         left: 6px;
+
+        @include respond(mobile) {
+            bottom: 200px;
+        }
 
         @include respond(tablet-portrait) {
             left: 4px;

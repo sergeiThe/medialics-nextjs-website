@@ -19,6 +19,7 @@
 
     @include respond(desktop) {
         grid-template-columns: [logo] 100px [nav] 50rem;
+        height: $desktop-height-header;
     }
 
     @include respond(desktop) {
@@ -29,6 +30,12 @@
         grid-area: logo;
         color: $bg-color-secondary;
         font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
 
         @include respond(mobile) {
             grid-area: mobileLogo;
@@ -45,7 +52,7 @@
     &__nav {
         grid-area: nav;
         position: relative;
-        border-bottom: $bg-color-primary 2px solid;
+        // border-bottom: $bg-color-primary 2px solid;
 
         @include respond(mobile) {
             grid-area: mobileNav;

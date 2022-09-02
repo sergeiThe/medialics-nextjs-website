@@ -4,7 +4,12 @@ body {
     padding: $padding-body;
     height: 100vh;
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
+
+    @include respond(mobile) {
+        height: 90vh;
+        overflow-y: scroll;
+    }
 }
 
 main {
@@ -12,32 +17,18 @@ main {
     height: $height-main;
     padding: $padding-main;
 
-    &::before {
-        content: "";
-        position: absolute;
-        background-color: $bg-color-secondary;
-        left: -5vw;
-        top: 18vh;
+    @include respond(mobile) {
+        padding: $mobile-padding-main;
+    }
 
-        height: 15rem;
-        // width: calc(100% + 10vw);
-        width: 5vw;
-
-        z-index: -10;
-
-        @include respond(desktop) {
-            left: -10vw;
-            // width: calc(100% + 20vw);
-        }
-        @include respond(big-desktop) {
-            left: -15vw;
-            // width: calc(100% + 30vw);
-        }
+    @include respond(desktop) {
+        height: $desktop-height-main;
     }
 }
 
 .scroll-allowed {
     overflow-y: scroll;
+    overflow-x: hidden;
 
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
