@@ -19,6 +19,8 @@ main {
 
     @include respond(mobile) {
         padding: $mobile-padding-main;
+        top: $mobile-height-header;
+        height: calc(95vh - $mobile-height-header);
     }
 
     @include respond(desktop) {

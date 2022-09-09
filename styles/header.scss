@@ -15,6 +15,15 @@
         grid-template-columns: 1fr;
         align-items: flex-end;
         height: $mobile-height-header;
+
+        // Fixed
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        background-color: $bg-color-primary;
     }
 
     @include respond(desktop) {

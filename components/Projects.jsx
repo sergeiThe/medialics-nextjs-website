@@ -3,7 +3,7 @@ import data from "../data/data";
 import Project from "./Project";
 import { motion } from "framer-motion";
 
-const projects = data.projects.projectList.map((project) => {
+const projects = data.projects.projectList.map((project, i) => {
     return (
         <Project
             key={project.id}
@@ -11,6 +11,7 @@ const projects = data.projects.projectList.map((project) => {
             imgUrl={project.imgURL}
             techStack={project.techStack}
             siteUrl={project.siteURL}
+            delay={i}
         />
     );
 });
