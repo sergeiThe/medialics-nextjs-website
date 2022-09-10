@@ -12,7 +12,7 @@ const data = {
     },
 
     projects: {
-        text: "Her finner du noen av mine komersielle prosjekter som jeg per nå vedlikeholder og oppdaterer når det trengs. Nå bruker jeg enten Wordpress eller NextJS for å lage nettsider. Det kommer an på hvor ofte en nettside skal oppdateres, hvor rask man trenger den og hvor detaljert kunde vil at jeg skal bygge nettstedet.",
+        text: "Her finner du noen av mine komersielle prosjekter som jeg per nå vedlikeholder og oppdaterer når det trengs. Nå bruker jeg enten Wordpress eller NextJS for å lage nettsider. Det kommer an på hvor ofte en nettside skal oppdateres, hvor rask man trenger den å være og hvor detaljert kunde vil at jeg skal bygge nettstedet.",
 
         projectList: [{
             id: 'p1',

@@ -1,9 +1,9 @@
 .projects {
     height: 100%;
-    animation: fadeIn 1.5s ease-out 0s backwards;
 
     &__text {
         color: $bg-color-secondary;
+        animation: fadeIn 1.5s ease-out 0s backwards;
 
         @include respond(mobile) {
             padding-top: 3rem;

@@ -7,7 +7,7 @@ body {
     overflow: hidden;
 
     @include respond(mobile) {
-        height: 90vh;
+        height: 100vh;
         overflow-y: scroll;
     }
 }
@@ -20,7 +20,7 @@ main {
     @include respond(mobile) {
         padding: $mobile-padding-main;
         top: $mobile-height-header;
-        height: calc(95vh - $mobile-height-header);
+        height: calc(100vh - $mobile-height-header);
     }
 
     @include respond(desktop) {
